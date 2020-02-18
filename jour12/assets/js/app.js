@@ -1,17 +1,12 @@
-window.open("index.php","PopUp",
+window.open("*.php","PopUp",
 "width=500,height=350,location=no,status=no,toolbar=no,scrollbars=no");
 
-function display() {
-    console.log("Document cliqué");
-  }
-  
-  window.addEventListener("click", display);
-  
-  let lien = document.querySelector("#lien");
-  let modal = document.querySelector("#modal");
-  
-  window.addEventListener("mouseout", function() {
-    modal.style.display = "block";
 
-  });
-  
+  // référence éléments du DOM
+const menu = document.querySelector("#menu");
+const sliderMenu = document.querySelector(".slide");
+
+// écouteur sur le click
+menu.addEventListener("click", function() {
+  sliderMenu.classList.toggle("slide");
+});
